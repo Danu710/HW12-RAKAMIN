@@ -1,12 +1,11 @@
 import React from "react";
-import "./Box.css";
-//import styles from "./styles.module.css";
+import "./styles.box.css";
 
 const Box = ({ value, onClick }) => {
   const style = value === "X" ? "box x" : "box o";
 
   return (
-    <div className="">
+    <div className="rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">
       <button className={style} onClick={onClick}>
         {value}
       </button>

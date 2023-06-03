@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ScoreBoard, Board, ResetButton } from "./component/index";
 import PropsContext from "./PropsContext";
+import "tailwindcss/tailwind.css";
 
 const App = () => {
   const [xPlaying, setXPlaying] = useState(true);
@@ -83,7 +84,7 @@ const App = () => {
 
   return (
     <PropsContext.Provider value={props}>
-      <div className="flex flex-col items-center justify-center px-5 py-8 m-5 border border-gray-100 rounded-sm shadow-2xl sm:px-16 sm:py-20 sm:m-20">
+      <div className="flex flex-col items-center justify-center px-5 py-8 m-5 border border-gray-100 rounded-sm shadow-2xl bg-custom-image sm:px-16 sm:py-20 sm:m-20 ">
         <ScoreBoard />
         <Board onClick={gameOver ? restart : selectSquare} />
         <ResetButton />
